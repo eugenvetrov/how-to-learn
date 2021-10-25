@@ -7,11 +7,11 @@
   margin: 0 auto;
   /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  color: #000;
+  color: var(--color-of-text);
 }
 
 a {
-  color: #2f80ed;
+  color: var(--blue);
   text-decoration: none;
   margin: 0;
 }
@@ -24,6 +24,15 @@ p {
   margin: 0;
 }
 
+:root {
+  --dark-gray: #1f1f1f;
+  --light-gray: #f2f2f2;
+  --blue: #2f80ed;
+  --color-of-text: #000;
+  --title-line-h: 1.15;
+  --footer-column-line-h: 30px;
+  --feynman-subtitle-and-link-line-h: 51px;
+}
 
 /* Заголовок */
 
@@ -33,7 +42,7 @@ p {
   max-height: 756px;
   /* выше установили ограничения для секции */
   display: flex;
-  background-color: #f2f2f2;
+  background-color: var(--light-gray);
   position: relative;
 }
 
@@ -41,7 +50,7 @@ p {
 .header__square-pic {
   height: 568px;
   width: 568px;
-  background-color: #2f80ed;
+  background-color: var(--blue);
   position: absolute;
   top: 64px;
   right: 0;
@@ -50,10 +59,10 @@ p {
 
 .header__title {
   font-size: 102px;
-  height: 96px;
   width: 730px;
   display: flex;
   align-self: center;
+  line-height: 96px;
   font-weight: 600;
   flex-wrap: wrap;
   align-content: center;
@@ -80,14 +89,6 @@ p {
   bottom: 0;
   right: 0;
   z-index: 2;
-}
-
-/* и элемента с модификатором вида ключ-значение */
-.table__cell_theme_dark {
-  width: 200px;
-  color: white;
-  margin-right: 0;
-  margin-top: 80px;
 }
 
 /* Логотип */
@@ -125,7 +126,7 @@ p {
   line-height: 1.2;
   font-size: 18px;
   font-weight: 400;
-  color: #2f80ed;
+  color: var(--blue);
 }
 
 .two-columns__main-text {
@@ -140,18 +141,12 @@ p {
   font-size: 24px;
 }
 
-.two-columns__paragraph_top {
+.two-columns__paragraph_top, .two-columns__paragraph_bottom {
   margin-bottom: 30px;
 }
 
-.two-columns__paragraph_bottom {
-  margin-top: 30px;
-}
-
 .two-columns__span-accent {
-  line-height: 34px;
   font-weight: 600;
-  font-size: 24px;
 }
 
 /* Таблица */
@@ -169,7 +164,7 @@ p {
   justify-content: center;
   margin: 100px 0 0 0;
   width: 60%;
-  line-height: 1.15;
+  line-height: var(--title-line-h);
   font-size: 60px;
   font-weight: 600;
 }
@@ -205,7 +200,7 @@ p {
 }
 
 .table__heading  {
-  line-height: 1.15;
+  line-height: var(--title-line-h);
   font-size: 24px;
   font-weight: 600;
   margin: 0 0 20px 0;
@@ -219,15 +214,12 @@ p {
 
 .table__text-p {
   margin: 0 0 20px 0;
-  line-height: 1.2;
-  font-size: 18px;
-  font-weight: 400;
 }
 
 /* Фейнман (заголовок, под-заголовок ссылка и картинка) */
 
 .feynman {
-  background-color: #f2f2f2;
+  background-color: var(--light-gray);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -242,7 +234,7 @@ p {
   z-index: 3;
   width: 648px;
   justify-content: center;
-  line-height: 1.15;
+  line-height: var(--title-line-h);
   font-size: 120px;
   font-weight: 600;
   text-align: center;
@@ -253,7 +245,7 @@ p {
   margin: 70px 0 0 0;
   z-index: 3;
   justify-content: center;
-  line-height: 51px;
+  line-height: var(--feynman-subtitle-and-link-line-h);
   font-size: 36px;
   font-weight: 400;
 }
@@ -271,7 +263,7 @@ p {
   position: absolute;
   top: 50%;
   right: 48px;
-  line-height: 51px;
+  line-height: var(--feynman-subtitle-and-link-line-h);
   font-size: 36px;
   font-weight: 400;
 }
@@ -289,13 +281,13 @@ p {
 }
 
 .section_theme_dark {
-  background-color:  #1f1f1f;
+  background-color: var(--dark-gray);
   color: #fff;
 }
 
 .section-title_theme_dark {
   margin: 90px 0 0 0;
-  line-height: 1.15;
+  line-height: var(--title-line-h);
   font-size: 60px;
   font-weight: 600;
   z-index: 3;
@@ -323,7 +315,7 @@ p {
 }
 
 .table__heading_theme_dark {
-  line-height: 1.15;
+  line-height: var(--title-line-h);
   font-size: 24px;
   font-weight: 600;
 }
@@ -340,7 +332,7 @@ p {
 
 .footer {
   display: flex;
-  background-color: #1f1f1f;
+  background-color: var(--dark-gray);
   color: #fff;
   min-height: 350px;
 }
@@ -354,7 +346,7 @@ p {
 
 .footer__column-heading {
   margin: 0 0 20px 0;
-  line-height: 30px;
+  line-height: var(--footer-column-line-h);
   font-size: 18px;
   font-weight: 600;
 }
@@ -368,7 +360,7 @@ p {
 
 .footer__column-link {
   color: #fff;
-  line-height: 30px;
+  line-height: var(--footer-column-line-h);
   font-size: 18px;
   font-weight: 400;
 }
