@@ -197,7 +197,7 @@ a {
   line-height: 1.15;
   font-size: 24px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
 }
 
 .table__text {
@@ -206,7 +206,7 @@ a {
   font-weight: 400;
 }
 
-.table__text_p {
+.table__text-p {
   margin: 0 0 20px 0;
 }
 
