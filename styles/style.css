@@ -67,7 +67,7 @@ p {
   bottom: 30px;
   left: 64px;
   width: 388px;
-  height: 25px;
+  line-height: 25px;
   font-size: 18px;
   font-weight: 400;
   z-index: 3;
@@ -116,7 +116,7 @@ p {
 .two-columns {
   display: flex;
   margin: 100px auto 0 auto;
-  justify-content: center;
+  justify-content: space-between;
   width: 80%;
 }
 
