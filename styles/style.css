@@ -7,31 +7,7 @@
   margin: 0 auto;
   /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  color: var(--color-of-text);
-}
-
-a {
-  color: var(--blue);
-  text-decoration: none;
-  margin: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-}
-
-p {
-  margin: 0;
-}
-
-:root {
-  --dark-gray: #1f1f1f;
-  --light-gray: #f2f2f2;
-  --blue: #2f80ed;
-  --color-of-text: #000;
-  --title-line-h: 1.15;
-  --footer-column-line-h: 30px;
-  --feynman-subtitle-and-link-line-h: 51px;
+  color: #000;
 }
 
 /* Заголовок */
@@ -42,7 +18,7 @@ p {
   max-height: 756px;
   /* выше установили ограничения для секции */
   display: flex;
-  background-color: var(--light-gray);
+  background-color: #f2f2f2;
   position: relative;
 }
 
@@ -50,7 +26,7 @@ p {
 .header__square-pic {
   height: 568px;
   width: 568px;
-  background-color: var(--blue);
+  background-color: #2f80ed;
   position: absolute;
   top: 64px;
   right: 0;
@@ -80,6 +56,9 @@ p {
   font-size: 18px;
   font-weight: 400;
   z-index: 3;
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .header__main-illustration {
@@ -91,13 +70,17 @@ p {
   z-index: 2;
 }
 
+.header__link {
+  color: #2f80ed;
+  text-decoration: none;
+  margin: 0;
+}
+
 /* Логотип */
 
 .logo {
   background-size: contain;
   background-repeat: no-repeat;
-  width: 145px;
-  height: 25px;
   z-index: 2;
 }
 
@@ -105,10 +88,14 @@ p {
   position: absolute;
   top: 30px;
   left: 64px;
+  width: 183px;
+  height: 32px;
   background-image: url(../images/logo_place_header.svg);
 }
 
 .logo_place_footer {
+  width: 183px;
+  height: 35px;
   background-image: url(../images/logo_place_footer.svg);
 }
 
@@ -126,7 +113,11 @@ p {
   line-height: 1.2;
   font-size: 18px;
   font-weight: 400;
-  color: var(--blue);
+  color: #2f80ed;;
+  text-decoration: none;
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .two-columns__main-text {
@@ -139,14 +130,22 @@ p {
   line-height: 34px;
   font-weight: 400;
   font-size: 24px;
+  margin: 0;
+  margin margin-block-start: 0;
+  margin-block-end: 0;
 }
 
-.two-columns__paragraph_top, .two-columns__paragraph_bottom {
-  margin-bottom: 30px;
+.two-columns__paragraph:nth-of-type(1) {
+  margin: 0 0 30px 0;
+}
+
+.two-columns__paragraph:nth-of-type(2) {
+  margin: 0 0 30px 0;
 }
 
 .two-columns__span-accent {
   font-weight: 600;
+  margin: 0;
 }
 
 /* Таблица */
@@ -164,7 +163,7 @@ p {
   justify-content: center;
   margin: 100px 0 0 0;
   width: 60%;
-  line-height: var(--title-line-h);
+  line-height: 1.15;
   font-size: 60px;
   font-weight: 600;
 }
@@ -173,57 +172,65 @@ p {
   display: flex;
   justify-content: center;
   width: 60%;
-  margin-top: 20px;
+  margin: 20px 0 0 0;
   line-height: 34px;
   font-size: 24px;
   font-weight: 400;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .table {
   display: flex;
-  width: 1100px;
   flex-wrap: wrap;
+  width: 1100px;
   justify-content: space-between;
   margin: 0 auto 100px auto;
-}
-
-.table__row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 1100px;
-  margin: 60px auto 0 auto;
+  padding: 0;
+  list-style-type: none;
 }
 
 .table__cell {
   width: 250px;
+  margin: 60px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .table__heading  {
-  line-height: var(--title-line-h);
+  display: flex;
+  line-height: 1.15;
   font-size: 24px;
   font-weight: 600;
   margin: 0 0 20px 0;
 }
 
 .table__text {
+  display: flex;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.table__text:nth-of-type(2) {
+  margin: 20px 0 0 0;
   line-height: 1.2;
   font-size: 18px;
   font-weight: 400;
 }
 
-.table__text-p {
-  margin: 0 0 20px 0;
-}
-
 /* Фейнман (заголовок, под-заголовок ссылка и картинка) */
 
 .feynman {
-  background-color: var(--light-gray);
+  background-color: #f2f2f2;
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 890px;
+  min-height: 890px;
   position: relative;
   flex-wrap: wrap;
 }
@@ -234,7 +241,7 @@ p {
   z-index: 3;
   width: 648px;
   justify-content: center;
-  line-height: var(--title-line-h);
+  line-height: 1.15;
   font-size: 120px;
   font-weight: 600;
   text-align: center;
@@ -245,7 +252,7 @@ p {
   margin: 70px 0 0 0;
   z-index: 3;
   justify-content: center;
-  line-height: var(--feynman-subtitle-and-link-line-h);
+  line-height: 51px;
   font-size: 36px;
   font-weight: 400;
 }
@@ -263,9 +270,12 @@ p {
   position: absolute;
   top: 50%;
   right: 48px;
-  line-height: var(--feynman-subtitle-and-link-line-h);
+  line-height: 51px;
   font-size: 36px;
   font-weight: 400;
+  color: #2f80ed;
+  text-decoration: none;
+  margin: 0;
 }
 
 /* Секция с Кауфманом */
@@ -277,16 +287,15 @@ p {
   justify-content: center;
   flex-wrap: wrap;
   overflow: hidden;
-}
-
-.section_theme_dark {
-  background-color: var(--dark-gray);
+  background-color: #1f1f1f;
+  color: #fff;
+  background-color: #1f1f1f;
   color: #fff;
 }
 
 .section-title_theme_dark {
   margin: 90px 0 0 0;
-  line-height: var(--title-line-h);
+  line-height: 1.15;
   font-size: 60px;
   font-weight: 600;
   z-index: 3;
@@ -300,38 +309,47 @@ p {
 }
 
 .table_theme_dark {
-  margin:0 auto 90px auto;
-}
-
-.table__row_theme_dark {
-  margin: 80px 0 0 0;
+  margin: 0 auto 90px auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 1100px;
+  justify-content: space-between;
+  padding: 0;
+  list-style-type: none;
 }
 
 .table__cell_theme_dark {
   width: 200px;
-  margin: 0;
+  margin: 80px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   z-index: 3;
 }
 
 .table__heading_theme_dark {
-  line-height: var(--title-line-h);
+  line-height: 1.15;
   font-size: 24px;
   font-weight: 600;
+  margin: 0;
 }
 
 .kaufman__triangle{
   position: absolute;
-  right: -210px;
-  width: 877px;
   height: 877px;
+  width: 877px;
+  right: -210px;
   z-index: 1;
+  background-image: url(../images/kaufman-triangle.svg);
+  background-size: 877px 877px;
+  background-position: content;
 }
 
 /* Подвал */
 
 .footer {
   display: flex;
-  background-color: var(--dark-gray);
+  background-color: #1f1f1f;
   color: #fff;
   min-height: 350px;
 }
@@ -343,9 +361,15 @@ p {
   justify-content: space-between;
 }
 
+.footer__column{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
 .footer__column-heading {
   margin: 0 0 20px 0;
-  line-height: var(--footer-column-line-h);
+  line-height: 30px;
   font-size: 18px;
   font-weight: 600;
 }
@@ -359,9 +383,11 @@ p {
 
 .footer__column-link {
   color: #fff;
-  line-height: var(--footer-column-line-h);
+  line-height: 30px;
   font-size: 18px;
   font-weight: 400;
+  text-decoration: none;
+  margin: 0;
 }
 
 .footer__column_content_copyright {
