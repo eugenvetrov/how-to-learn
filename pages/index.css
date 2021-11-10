@@ -15,6 +15,9 @@
 @import url(../blocks/logo/_place/logo_place_header.css);
 @import url(../blocks/logo/_place/logo_place_footer.css);
 
+/* Анимации */
+@import url(../blocks/rotation/rotation.css);
+
 /* Двухколоночное описание */
 @import url(../blocks/two-columns/two-columns.css);
 @import url(../blocks/two-columns/__brief/two-columns__brief.css);
@@ -22,12 +25,28 @@
 @import url(../blocks/two-columns/__paragraph/two-columns__paragraph.css);
 @import url(../blocks/two-columns/__span-accent/two-columns__span-accent.css);
 
-/* Секция про числа */
-@import url(../blocks/digits/digits.css);
 
 /* Заголовок секции */
 @import url(../blocks/section-title/section-title.css);
 @import url(../blocks/section-title/_theme_dark/section-title_theme_dark.css);
+
+/* Секция с техниками Барабары Оакли */
+@import url(../blocks/techniques/techniques.css);
+@import url(../blocks/cards/cards.css);
+@import url(../blocks/cards/__item/cards__item.css);
+@import url(../blocks/cards/__image/cards__image.css);
+@import url(../blocks/cards/__title/cards__title.css);
+@import url(../blocks/cards/__description/cards__description.css);
+
+/* Секция с Фейнманом */
+@import url(../blocks/feynman/feynman.css);
+@import url(../blocks/feynman/__image/feynman__image.css);
+@import url(../blocks/feynman/__link/feynman__link.css);
+@import url(../blocks/feynman/__subtitle/feynman__subtitle.css);
+@import url(../blocks/feynman/__title/feynman__title.css);
+
+/* Секция про числа */
+@import url(../blocks/digits/digits.css);
 
 /* Подзаголовок секции */
 @import url(../blocks/section-subtitle/section-subtitle.css);
@@ -41,13 +60,6 @@
 @import url(../blocks/table/__heading/table__heading.css);
 @import url(../blocks/table/__heading/_theme_dark/table__heading_theme_dark.css);
 @import url(../blocks/table/__text/table__text.css);
-
-/* Секция с Фейнманом */
-@import url(../blocks/feynman/feynman.css);
-@import url(../blocks/feynman/__image/feynman__image.css);
-@import url(../blocks/feynman/__link/feynman__link.css);
-@import url(../blocks/feynman/__subtitle/feynman__subtitle.css);
-@import url(../blocks/feynman/__title/feynman__title.css);
 
 /* Секция с Кауфманом */
 @import url(../blocks/kaufman/kaufman.css);
