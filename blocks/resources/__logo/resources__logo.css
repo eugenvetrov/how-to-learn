@@ -1,5 +1,7 @@
 .resources__logo {
-  list-style-type: none;
+  text-decoration: none;
+  color: #2f80ed;
+  /* Добавил цвет и убрал подчёркивание, на случай, если потом будут добавлены элементы с текстом */
   margin: 0;
   padding: 0;
   width: 270px;
